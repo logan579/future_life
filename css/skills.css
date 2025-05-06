@@ -1,0 +1,20 @@
+body{
+    background-image: linear-gradient(to left,#020024,#090979,#00d4ff);
+}
+/* contain on the body*/
+.containt{
+    background-color: rgb(163, 158, 158);
+    position: absolute;
+    top: 240px;
+    left:620px;
+    border-radius: 15px;;
+
+
+}
+/* image contain */
+.img-contain{
+    position: absolute;
+    top: 240px;
+    left: 30px;
+    border-radius: 15px;
+}
