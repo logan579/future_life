@@ -1,3 +1,33 @@
+body{
+    background-image: linear-gradient(to left,#020024,#090979,#00d4ff);
+}
+/* contain on the body*/
+.containt{
+    background-color: rgb(163, 158, 158);
+    position: absolute;
+    top: 280px;
+    left:620px;
+    border-radius: 15px;;
+
+
+}
+/* image contain */
+.img-contain{
+    position: absolute;
+    top: 280px;
+    left: 30px;
+    border-radius: 15px;
+}
+body{ background-image: linear-gradient(to left,#020024,#090979,#00D4FF);}
+/* Add a black background color to the top navigation bar */
+.topnav {
+ overflow: hidden;
+ background-color: #e9e9e9;
+ position: fixed;
+ left: 55%;
+ bottom: 80%;
+}
+
 body{ background-image: linear-gradient(to left,#020024,#090979,#00D4FF);}
 /* Add a black background color to the top navigation bar */
 .topnav {
