@@ -1,0 +1,79 @@
+body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
+/* Add a black background color to the top navigation bar */
+.topnav {
+ overflow: hidden;
+ background-color: #e9e9e9;
+ position: fixed;
+ left: 50%;
+ bottom: 85%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+ float: left;
+ display: block;
+ color: black;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+ background-color: green;
+ color: black;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+ background-color: #2196F3;
+ color: white;
+}
+/*change position of the logo*/
+.img-logo {
+ position: absolute;
+ bottom: 60%;
+ right: 80%;
+}
+
+.signup-container {
+    background-image: linear-gradient(to left,#020024,#090979,#313839);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    color: white;
+}
+h2 {
+    text-align: center;
+}
+.input-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background: #218838;
+}

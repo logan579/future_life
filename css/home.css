@@ -1,18 +1,18 @@
-       body{ background-image: linear-gradient(to left,#020024,#090979,#00D4FF);}
+       body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
        /* Add a black background color to the top navigation bar */
        .topnav {
         overflow: hidden;
-        background-color: #e9e9e9;
+       background-image: linear-gradient(to left,#020024,#090979,#708033);
         position: fixed;
-        left: 55%;
-        bottom: 80%;
+        left: 50%;
+        bottom: 85%;
       }
       
       /* Style the links inside the navigation bar */
       .topnav a {
         float: left;
         display: block;
-        color: black;
+        color: rgb(255, 255, 255);
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -27,21 +27,21 @@
       
       /* Style the "active" element to highlight the current page */
       .topnav a.active {
-        background-color: #2196F3;
+        background-image: linear-gradient(to left,#020024,#090979,#2261bf);
         color: white;
       }
       /*change position of the logo*/
       .img-logo {
         position: absolute;
-        bottom: 50%;
-        right: 70%;
+        bottom: 60%;
+        right: 80%;
       }
       /*change position of the paragraph*/
        .introduction{
         position: absolute;
         bottom: 50%;
         right: 40%;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         font-style: italic;
         font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 20px;
@@ -52,6 +52,7 @@
       
         position: absolute;
         bottom: 10%;
+        color: rgb(255, 255, 255);
        }
        /*  /*change position and color of contact us of footer*/
        .contact{
@@ -59,9 +60,10 @@
         position: absolute;
         bottom: 16%;
         left: 30%;
+        color: rgb(255, 255, 255);
        }
 
-        /*change position and color of location of footer*/
+  
         .location{
           position: absolute;
           bottom: 7%;

@@ -1,5 +1,5 @@
 body{
-    background-image: linear-gradient(to left,#020024,#090979,#00d4ff);
+    background-image: linear-gradient(to left,#020024,#090979,#708033);
 }
 /* contain on the body*/
 .containt{
@@ -32,17 +32,17 @@ body{ background-image: linear-gradient(to left,#020024,#090979,#00D4FF);}
 /* Add a black background color to the top navigation bar */
 .topnav {
  overflow: hidden;
- background-color: #e9e9e9;
+  background-image: linear-gradient(to left,#020024,#090979,#708033);
  position: fixed;
- left: 55%;
- bottom: 80%;
+ left: 50%;
+ bottom: 85%;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
  float: left;
  display: block;
- color: black;
+ color: rgb(255, 255, 255);
  text-align: center;
  padding: 14px 16px;
  text-decoration: none;
@@ -57,7 +57,7 @@ body{ background-image: linear-gradient(to left,#020024,#090979,#00D4FF);}
 
 /* Style the "active" element to highlight the current page */
 .topnav a.active {
- background-color: #2196F3;
+background-image: linear-gradient(to left,#020024,#090979,#00D4FF);
  color: white;
 }
 /*change position of the logo*/
