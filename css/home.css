@@ -1,14 +1,13 @@
        body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
-       /* Add a black background color to the top navigation bar */
+  
        .topnav {
         overflow: hidden;
-       background-image: linear-gradient(to left,#020024,#090979,#708033);
+        background-image: linear-gradient(to left,#020024,#090979,orange);
         position: fixed;
         left: 50%;
         bottom: 85%;
       }
-      
-      /* Style the links inside the navigation bar */
+    
       .topnav a {
         float: left;
         display: block;
@@ -19,42 +18,43 @@
         font-size: 17px;
       }
       
-      /* Change the color of links on hover */
+ 
       .topnav a:hover {
         background-color: green;
         color: black;
       }
       
-      /* Style the "active" element to highlight the current page */
+
+
       .topnav a.active {
         background-image: linear-gradient(to left,#020024,#090979,#2261bf);
         color: white;
       }
-      /*change position of the logo*/
+   
       .img-logo {
         position: absolute;
         bottom: 60%;
         right: 80%;
       }
-      /*change position of the paragraph*/
+ 
        .introduction{
         position: absolute;
         bottom: 50%;
-        right: 40%;
+        right: 53%;
         color: rgb(255, 255, 255);
         font-style: italic;
         font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 20px;
         
        }
-       /*change position  and color of our social media in footer*/
+   
        .footer{
       
         position: absolute;
         bottom: 10%;
         color: rgb(255, 255, 255);
        }
-       /*  /*change position and color of contact us of footer*/
+     
        .contact{
   
         position: absolute;
@@ -70,4 +70,16 @@
           left: 60%;
           
           color: rgb(255, 255, 255);
+        }
+
+
+        .vl{
+          border-left: 20px solid #f1f1f1;
+          width: 600px;
+          height: 100px;
+          position: absolute;
+          top: 36%;
+          left: 3%;
+          background-image: linear-gradient(to left,#020024,#090979,#708033);
+          
         }
