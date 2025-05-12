@@ -39,12 +39,16 @@ body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
  right: 80%;
 }
 
-
+  .img-m{
+    border-radius: 20px;
+  }
 
 .btn {
 display: inline-block;
 padding: 1px 15px;
 margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 30px;
 background: #28a745;
 color: white;
 text-decoration: none;
@@ -78,6 +82,15 @@ font-size: x-large;
         border-radius: 50px;
         width: fit-content;
         height: fit-content;
+  }
+  .items:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    
+    box-shadow: 10px 10px 10px 5px  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
   }
            
 .btn:hover {

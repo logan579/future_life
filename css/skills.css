@@ -4,6 +4,7 @@ body{
 
 .containt{
     background-image: linear-gradient(to left,#020024,#090979,#313839);
+    box-shadow: 10px 10px rgba(36, 13, 13, 0.1);
     color: white;
     position: absolute;
     top: 150px;
@@ -20,6 +21,7 @@ body{
     left: 30px;
     border-radius: 50px;
     background-color: #020024;
+    box-shadow: 10px 10px black
 }
 
 .topnav {
