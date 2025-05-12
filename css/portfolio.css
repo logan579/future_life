@@ -1,0 +1,76 @@
+body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
+
+.topnav {
+    overflow: hidden;
+    background-image: linear-gradient(to left,#020024,#090979,orange);
+    position: fixed;
+    left: 50%;
+    bottom: 85%;
+  }
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+  .topnav a:hover {
+    background-color: green;
+    color: black;
+  }
+  
+
+
+  .topnav a.active {
+    background-image: linear-gradient(to left,#020024,#090979,#2261bf);
+    color: white;
+  }
+
+  .img-logo {
+    position: absolute;
+    bottom: 60%;
+    right: 80%;
+  }
+.btn-contain{
+  
+ background-image: linear-gradient(to left,#0a0a0a,#040452,#010408);
+  position:absolute;
+  top: 20%;
+  left: 30%;
+  border-radius: 6%;
+
+  width: 800px;
+  height: 400px;
+  overflow: auto;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+   
+}
+
+
+.items{
+
+  margin-left: 30px;
+  font-size:large;
+}
+.item{
+  margin-left: 30px;
+  font-size:large;
+  position: relative;
+  top: 15%;
+}
+h1{
+  color: white;
+}
+h2{
+  color: white;
+}
+p{
+  color: white;
+}

@@ -88,8 +88,8 @@ button:hover {
     position: absolute;
     top: 36%;
     left: 1%;
-    background-image: linear-gradient(to left,#020024,#090979,#708033);
-    border-radius: 50px;
+    background-color: black;
+    box-shadow: 10px 10px 10px 5px  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-transform: uppercase;
     text-overflow: ellipsis;
     
