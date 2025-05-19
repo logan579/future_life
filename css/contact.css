@@ -1,51 +1,107 @@
 
-.topnav {
-    overflow: hidden;
-    background-color: #e9e9e9;
-    position: fixed;
-    left: 55%;
-    bottom: 80%;
-   }
-   
-   body{ background-image: linear-gradient(to left,#020024,#090979,#00D4FF);}
+       body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
    
 
+      /* ===== Expert-Level Link Styling FROM LOGAN579 ===== */
 
-   .topnav {
-    overflow: hidden;
-     background-image: linear-gradient(to left,#020024,#090979,orange);
-    position: fixed;
-    left: 50%;
-    bottom: 85%;
-   }
-   
-   .topnav a {
-    float: left;
-    display: block;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-   }
-   
-
-   .topnav a:hover {
-    background-color: green;
-    color: black;
-   }
-   
+a {
+  --link-color: white;      
+  --visited-color: #000000;   
+  --hover-color: #b7acac;      
+  --active-color: #d6dd06e6;    
+  --focus-outline: 2px solid #60a5fa; 
   
-   .topnav a.active {
-   background-image: linear-gradient(to left,#020024,#090979,#00D4FF);
-    color: white;
-   }
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 
+    color 0.2s ease,
+    background-color 0.2s ease,
+    text-decoration-color 0.2s ease;
+  position: relative;
+  margin-right: 20px;
+  font-weight:lighter;
+  font-size: x-large;
+
+  outline: none; 
+}
+
+a:not(.no-underline)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--link-color);
+  transition: width 0.3s ease;
+}
+
+
+a:hover {
+  color: var(--hover-color);
+  text-decoration-color: var(--hover-color);
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:visited {
+  color: var(--visited-color);
+}
+
+a:active {
+  color: var(--active-color);
+  transform: translateY(1px); /* Micro-interaction */
+}
+
+a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+
+a[aria-disabled="true"] {
+  color: #94a3b8 !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+.external-link::after {
+  content: " ↗";
+  display: inline-block;
+  margin-left: 0.25em;
+  transition: transform 0.2s ease;
+}
+
+.external-link:hover::after {
+  transform: translate(2px, -2px);
+}
+
+    
+.header{
+  background-color: #000000;
+  height: fit-content;
+  width: fit-content;
+}
+
+.topnav{
+  position: fixed;
+  right: 10%;
+  top: 6%;
  
-   .img-logo {
-    position: absolute;
-    bottom: 60%;
-    right: 80%;
-   }
+
+}
+      .img-logo {
+        position: fixed;
+        bottom: 60%;
+        right: 80%;
+    
+      }
+
 
 .container{
 
@@ -117,10 +173,105 @@ input {
     
   }
 
+    .topnav :active{
+        background-color: #020024;
+        color: white;
+      }
   .detail{
      color: white;
-     margin-left: 20px;
+     margin-left: 10px;
      font-size: x-large;
      font-style: italic;
      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
+
+
+  /* Footer Styles */
+#footer {
+    background-color: #2c3e50; /* Dark blue-gray background */
+    color: #ecf0f1; /* Light text color */
+    padding: 2.5rem 1rem;
+    margin-top: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    bottom: 0%;
+}
+
+#footer h1 {
+    color: #3498db; 
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+#footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#footer li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+#footer li:hover {
+    color: #3498db; /* Light blue on hover */
+    transform: translateX(5px);
+}
+
+#footer img {
+    filter: brightness(0) invert(1); /* Make icons white */
+    transition: transform 0.3s ease;
+}
+
+#footer img:hover {
+    transform: scale(1.1);
+}
+
+.footer, .contact, .location {
+    margin-bottom: 1.5rem;
+}
+
+.location img {
+    margin-right: 1rem;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+
+@media (min-width: 768px) {
+    #footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 3rem 2rem;
+    }
+    
+    .footer, .contact, .location {
+        margin-bottom: 0;
+    }
+    
+    .location {
+        text-align: center;
+    }
+}
+
+/*Re sponsive adjustments */
+@media (max-width: 480px) {
+    #footer h1 {
+        font-size: 1.2rem;
+    }
+    
+    #footer li {
+        font-size: 0.9rem;
+    }
+    
+    .location img {
+        width: 80px;
+        height: 80px;
+    }
+}

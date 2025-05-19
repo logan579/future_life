@@ -5,21 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/blogs.css">
+    <style>
+      #display-blog {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin: 32px 0;
+        justify-content: center;
+        margin-top: 20%;
+    }
+    .blog-post {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        padding: 20px;
+        width: min-content;
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: box-shadow 0.2s;
+        background-color: #333
+      
+        ;
+    }
+    .blog-post:hover {
+        box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    }
+    .blog-post img {
+        border-radius: 8px;
+        margin-bottom: 12px;
+        margin-left: 70px;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        background: #f0f0f0;
+    }
+    .blog-post h2 {
+        font-size: 1.2rem;
+        margin: 10px 0 8px 0;
+        color: #333;
+        text-align: center;
+    }
+    .blog-post p {
+        font-size: 1rem;
+        color: #555;
+        text-align: center;
+        margin: 0;
+        word-break: break-word;
+        
+    }
+     .read-more-btn {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.read-more-btn:hover {
+    background: #218838;
+}
+
+    .read-more-btn{
+        border-radius: 30px;
+        width: fit-content;
+        padding-left: 10px;
+        margin-left: 100px;
+    }
+
+      .delete-btn {
+        background: red;
+        color: white;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        margin-left: 80%;
+        cursor: pointer;
+      }
+    </style>
 </head>
 <body>
-    <header class="header"></header>
-    <img src="../assets/images/logo1.gif" alt="logo" width="300" height="300" class="img-logo">
-    <nav class="topnav">
-      <a href="./home-page.html" class="active">home</a>
-      <a href="./about-page.html" >about</a>
-      <a href="./skills-page.html">skills</a>
-      <a href="./portfolio-page.html" >portfolio</a>
-      <a href="./blogs.html" >blog</a>
-      <a href="./login-page.html" >login</a>
-      <a href="./contact-page.html" >contact</a>
-      <a href="./add post.html">add post</a>  
-    </nav>
-   </header> 
+  <header class="header">
+      <img src="../assets/images/logo1.gif" alt="logo" width="300" height="300" class="img-logo">
+      <nav class="topnav">
+          <a href="./home-page.html" class="active">home</a>
+          <a href="./about-page.html" >about</a>
+          <a href="./skills-page.html">skills</a>
+          <a href="./portfolio-page.html" >portfolio</a>
+          <a href="./blogs.html" >blog</a>
+          <a href="./login-page.html" >login</a>
+          <a href="./contact-page.html" >contact</a>
+      </nav>
+  </header>
+
+   
        <div class="search-container">
         <div class="search-box">
             <input type="text" id="search-input" placeholder="Enter your search term...">
@@ -27,44 +110,42 @@
             <a href="./add post.html" class="add-button">add post</a>
         </div>
       </div>
-    
+   <div id="display-blog"></div>
+      
+
+    </div>
    
  
-    <div class="blog-container">
-      
-        <div class="blog-post">
-            <h2>progress in education</h2>
-            <img src="../assets/images/students.jpg" alt="student image" width="150" height="150" class="img-student">
-            <p>The government provided computers to students as<br> part of its efforts to promote...</p>
-            <div class="viewer">
-                <img src="../assets/images/viewer.webp" alt="viewer image" class="img-viewer">
-                <h4 >849k views.1day</h4>
-            </div>
-            <p class="btn">read more  →</p>
-        </div>
-        <div class="blog-post">
-            <h2>hygen in class</h2>
-            <img src="../assets/images/cleaning.jpg" alt="people image" width="150" height="150" class="img-student">
-            <p>the student has been punished becouse...</p>
-            <div class="viewer">
-           
-              <img src="../assets/images/viewer.webp" alt="viewer image"  class="img-viewer">
-              <h4 >849k views.3days</h4>
-            </div>
-            <p class="btn"> read more →</p>
-        </div>
-        <div class="blog-post">
-            <h2>help the needy</h2>
-            <img src="../assets/images/man power.jpg" alt="manpower image" width="150" height="150" class="img-student">
-            <p>they give one piece of rice...</p>
-
-            <div class="viewer">
-              <img src="../assets/images/viewer.webp" alt="viewer image" class="img-viewer">
-              <h4 >849k views.7month</h4>
-            </div>
-          <p class="btn">read more →</p>
-           
-        
-    </div>
+        <script>
+        function escapeHtml(text) {
+            var map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+        function displayPosts() {
+            const posts = JSON.parse(localStorage.getItem('posts') || '[]');
+            const display = document.getElementById('display-blog');
+            display.innerHTML = '';
+            posts.forEach(post => {
+                display.innerHTML += `
+                    <div class="blog-post" id="blog-container">
+                        <div id="blog-post">
+                            <h2 id="blog-title">${escapeHtml(post.name)}</h2>
+                            <img src="${escapeHtml(post.image)}" alt="blog image" width="150" height="150" id="images">
+                            <p id="description">${post.description.length > 100 ? escapeHtml(post.description.substring(0, 100)) + '...' : escapeHtml(post.description)}</p>
+                            <button class="read-more-btn" onclick="alert('${escapeHtml(post.description)}')">Read More</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+        // Call displayPosts on page load
+        window.onload = displayPosts;
+        </script>
 </body>
 </html>
