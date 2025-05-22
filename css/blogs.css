@@ -10,8 +10,7 @@ a {
   --hover-color: #b7acac;      
   --active-color: #d6dd06e6;    
   --focus-outline: 2px solid #60a5fa; 
-  
-  color: var(--link-color);
+  color: white;
   text-decoration: none;
   font-weight: 500;
   transition: 
@@ -48,7 +47,7 @@ a:hover::after {
 }
 
 a:visited {
-  color: var(--visited-color);
+  color: gray;
 }
 
 a:active {
@@ -81,25 +80,33 @@ a[aria-disabled="true"] {
   transform: translate(2px, -2px);
 }
 
-    
-.header{
-  background-color: #000000;
-  height: fit-content;
-  width: fit-content;
-}
 
 .topnav{
   position: fixed;
   right: 10%;
   top: 6%;
- 
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 85%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
 }
+
       .img-logo {
-        position: fixed;
-        bottom: 60%;
-        right: 80%;
+        position: sticky;
+        top: 0px;
+        right: 75%;
+        margin: 0;
       }
+
 
 
 .btn:hover {
@@ -253,6 +260,88 @@ a[aria-disabled="true"] {
 #search-button:hover {
     background-color: #3367d6;
 }
+
+
+  #display-blog {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin: 32px 0;
+        justify-content: center;
+        margin-top: 20%;
+    }
+    .blog-post {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        padding: 20px;
+        width: min-content;
+        height: min-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: box-shadow 0.2s;
+        background-color: #333
+      
+        ;
+    }
+    .blog-post:hover {
+        box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    }
+    .blog-post img {
+        border-radius: 8px;
+        margin-bottom: 12px;
+        margin-left: 70px;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        background: #f0f0f0;
+    }
+    .blog-post h2 {
+        font-size: 1.2rem;
+        margin: 10px 0 8px 0;
+        color: #333;
+        text-align: center;
+    }
+    .blog-post p {
+        font-size: 1rem;
+        color: #555;
+        text-align: center;
+        margin: 0;
+        word-break: break-word;
+        
+    }
+     .read-more-btn {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.read-more-btn:hover {
+    background: #218838;
+}
+
+    .read-more-btn{
+        border-radius: 30px;
+        width: fit-content;
+        padding-left: 10px;
+        margin-left: 100px;
+    }
+
+      .delete-btn {
+        background: red;
+        color: white;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        margin-left: 80%;
+        cursor: pointer;
+      }
 @media (max-width:786px) {
    .img-logo {
         position: fixed;
