@@ -1,4 +1,5 @@
-       body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
+       body{ background-image: linear-gradient(to left,#020024,#090979,#708033)
+        ;    font-family: Arial, sans-serif;}
      /* ===== Expert-Level Link Styling FROM LOGAN579 ===== */
 
      
@@ -124,8 +125,8 @@ a[aria-disabled="true"] {
             align-items: center;
             min-height: 100vh;
             padding: 20px;
-           background-image: conic-gradient(#020024,#090979,#708033);
-  border-radius: 50%;
+            background-image: conic-gradient(#020024,#090979,#708033);
+            border-radius: 50%;
 }
         
 
@@ -138,6 +139,8 @@ a[aria-disabled="true"] {
 
 
         .form-container{
+          position: inherit;
+          margin-top: 5%;
           display: grid;
           grid-template-columns: 1fr 1fr;
         }
@@ -190,4 +193,74 @@ a[aria-disabled="true"] {
             display: none;
         }
 
+/* Highlight the current page link */
+.header a[href="./home-page.html"]:active,
+.header a[href="./about-page.html"]:active,
+.header a[href="./contact-page.html"]:active,
+.header a[href="./portfolio.html"]:active {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+
+
+       #footer{
+       background-color: black;
+      margin: -1%;
+       width: 100%;
+      
+       margin-top: 50%;
+    
+    
        
+
+   
+     
+       }
+   
+       footer{
+      
+        position: absolute;
+       
+        color: rgb(255, 255, 255);
+       
+       
+       }
+        .our_social_medias{
+          margin-left: 20px;
+         
+        }
+     
+       .contact{
+  
+        position: absolute;
+        bottom: 30%;
+        left: 30%;
+        color: rgb(255, 255, 255);
+       }
+
+  
+        .location{
+          position: absolute;
+          bottom: -15%;
+          left: 60%;
+          
+          color: rgb(255, 255, 255);
+        }
+
+
+        #footer li:hover {
+    color: #3498db; 
+    transform: translateX(4px);
+}
+
+
+#footer img:hover {
+    transform: scale(1.1);
+}
+
+.footer, .contact, .location {
+    margin-bottom: 1.5rem;
+}
+ 

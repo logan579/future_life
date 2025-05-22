@@ -1,4 +1,6 @@
-       body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
+       body{ background-image: linear-gradient(to left,#020024,#090979,#708033);
+          font-family: Arial, sans-serif;}
+
   
        /* ===== Expert-Level Link Styling FROM LOGAN579 ===== */
 
@@ -86,6 +88,7 @@ a[aria-disabled="true"] {
   position: fixed;
   right: 10%;
   top: 6%;
+  margin-left: 0px;
 }
 .header {
   position: fixed;
@@ -200,36 +203,104 @@ a[aria-disabled="true"] {
           text-overflow: ellipsis;
         }
           
-    
-@media screen and (max-width:768px) {
-    
-.introduction{
-  padding: auto;
-  margin: 10%;
-  font-size: large;
-  display: flex;
-     bottom: 40%;
-}
-.vl{
-  display: none;
-}
-.img-logo {
-        position: absolute;
-        bottom: 60%;
-        right: 50%;
-        display: flex;
-      }
-       .topnav {
-        overflow: hidden;
-        background-image: linear-gradient(to left,#020024,#090979,orange);
-        position: fixed;
-        left: 38%;
-        bottom: 80%;
-        width: 80%;
-      }
+
+        @media screen and (max-width: 1024px) {
+  .topnav {
+    right: 5%;
+    top: 5%;
+  }
+
+  .img-contain,
+  .img-contai {
+    width: 40%;
+    bottom: 30%;
+    right: 5%;
+  }
+
+  .introduction {
+    right: 10%;
+    bottom: 60%;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .vl {
+    width: 90%;
+    left: 5%;
+    top: 45%;
+    border-left: 10px solid #f1f1f1;
+  }
+
+  .contact,
+  .location {
+    position: relative;
+    text-align: center;
+    left: 0;
+    bottom: auto;
+    margin-bottom: 2rem;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  #footer {
+    margin-top: 40%;
+  }
 }
 
-     
-  
-
+@media screen and (max-width: 600px) {
+  .header {
+   font-size: 1px;
  
+  
+  }
+
+  .topnav {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin-left: 0px;
+  }
+
+  .img-logo {
+    right: 0;
+    margin-bottom: 1rem;
+    width: 100px;
+    height: 50px;
+  }
+
+  .img-contain,
+  .img-contai {
+    width: 100px;
+    height: 100px;
+    right: 0;
+    bottom: 60%;
+  }
+
+  .introduction {
+    position: inherit;
+    right: 0;
+    bottom: 0;
+
+    font-size: 14px;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .vl {
+    display:contents;
+  }
+
+  .contact,
+  .location {
+    position: relative;
+   text-align: left;
+    margin-top: 1rem;
+  }
+
+  #footer {
+    margin-top: 100%;
+  }
+}

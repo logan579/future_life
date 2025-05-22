@@ -1,4 +1,5 @@
-body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
+body{ background-image: linear-gradient(to left,#020024,#090979,#708033);
+    font-family: Arial, sans-serif;}
       /* ===== Expert-Level Link Styling FROM LOGAN579 ===== */
 
 a {
@@ -47,10 +48,6 @@ a:visited {
   color: gray;
 }
 
-a:active {
-  color: var(--active-color);
-  transform: translateY(1px); /* Micro-interaction */
-}
 
 a:focus-visible {
   outline: var(--focus-outline);
@@ -98,6 +95,8 @@ a[aria-disabled="true"] {
 
 }
 
+
+
       .img-logo {
         position: sticky;
         top: 0px;
@@ -112,6 +111,7 @@ a[aria-disabled="true"] {
 .btn {
 display: inline-block;
 padding: 1px 15px;
+position: inherit;
 margin-top: 10px;
 margin-bottom: 10px;
 margin-left: 30px;
@@ -125,9 +125,9 @@ font-size: x-large;
 }
 .container { 
         width: 600px; height: fit-content;
-        position: absolute;
-        top: 30%;
-        left: 7%;
+      position: inherit;
+
+      margin-top: 15%;
        background-image: linear-gradient(to left,#020024,#090979,#313839);
        color: orange;
         padding: 20px;
@@ -144,6 +144,7 @@ font-size: x-large;
 .items {  border-style: double;
         border-bottom: 1px solid #ddd;
         padding: 10px 10px;
+        margin-left: 20px;
         margin-bottom: 10px;
         border-radius: 50px;
         width: fit-content;
@@ -151,10 +152,10 @@ font-size: x-large;
   }
   .items:hover {
     background-color: black;
-    color: white;
-    cursor: pointer;
-    padding: 20px;
-  box-shadow: 0 0 20px 10px black
+    color: rgb(166, 110, 5);
+    cursor: pointer; 
+    padding: 15px;
+    box-shadow: 0 0 20px 10px black
 }
    
 
@@ -207,7 +208,7 @@ font-size: x-large;
        background-color: black;
        margin: -1%;
        width: 100%;
-       margin-top: 50%;
+       margin-top: 10%;
     
     
        
@@ -259,4 +260,15 @@ font-size: x-large;
 
 .footer, .contact, .location {
     margin-bottom: 1.5rem;
+}
+
+
+/* Highlight the current page link */
+.header a[href="./home-page.html"]:active,
+.header a[href="./about-page.html"]:active,
+.header a[href="./contact-page.html"]:active,
+.header a[href="./portfolio.html"]:active {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }

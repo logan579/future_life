@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater</title>
+    
+</head>
+<link rel="stylesheet" href="../css/calculater.css">
+<body>
+       
+    <header class="header">
+        <img src="../assets/images/logo_white.gif" alt="logo" width="400" height="90" class="img-logo">
+        <nav class="topnav">
+            <a href="./dashboard.html" class="active">Dashboard</a>
+            <a href="./profile.html">Profile</a>
+            <a href="./settings.html">Settings</a>
+            <a href="./logout.html">claculater</a>
+        </nav>
+    </header>
+
+    
+    <div class="calculator">
+        <input type="text" id="display" class="calculator-display" disabled>
+        <div class="calculator-keys">
+            <button class="key" onclick="appendNumber('7')">7</button>
+            <button class="key" onclick="appendNumber('8')">8</button>
+            <button class="key" onclick="appendNumber('9')">9</button>
+            <button class="key operator" onclick="setOperation('/')">/</button>
+
+            <button class="key" onclick="appendNumber('4')">4</button>
+            <button class="key" onclick="appendNumber('5')">5</button>
+            <button class="key" onclick="appendNumber('6')">6</button>
+            <button class="key operator" onclick="setOperation('*')">*</button>
+
+            <button class="key" onclick="appendNumber('1')">1</button>
+            <button class="key" onclick="appendNumber('2')">2</button>
+            <button class="key" onclick="appendNumber('3')">3</button>
+            <button class="key operator" onclick="setOperation('-')">-</button>
+
+            <button class="key" onclick="appendNumber('0')">0</button>
+            <button class="key" onclick="appendNumber('.')">.</button>
+            <button class="key" onclick="calculate()">=</button>
+            <button class="key operator" onclick="setOperation('+')">+</button>
+
+            <button class="key clear" onclick="clearDisplay()">C</button>
+        </div>
+    </div>
+
+
+
+    
+       <footer id="footer">
+         <div class="social_madias">
+            <h1>our social medias</h1>
+            <ul>
+               <li>
+                  <img src="../assets/images/3046121.png" alt="tiktok"width="30" height="30">lgn.ml2
+               </li>
+               <li>
+                  <img src="../assets/images/4138124.png" alt="instagram" width="30" height="30">feature life
+               </li>
+               <li>
+                  <img src="../assets/images/linkedin-128.webp" alt="linkidin" width="30" height="30">niyonshuti emery
+               </li>
+            </ul>
+         </div>
+         <div class="contact">
+            <h1>contact us</h1>
+            <ul>
+               <li>tell:+250794382975</li>
+               <li>email:niyonshutiemery@gmail.com</li>
+            </ul>
+
+         </div>
+         <div class="location">
+            <h1>location</h1>
+            <img src="../assets/images/location.webp" alt="location amage" width="100" height="100">:kigali, Rwanda
+
+         </div></footer>
+    <script src="../java script/calculater.js"></script>
+
+
+</body>
+</html>
