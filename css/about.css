@@ -7,8 +7,7 @@ a {
   --hover-color: #b7acac;      
   --active-color: #d6dd06e6;    
   --focus-outline: 2px solid #60a5fa; 
-  
-  color: var(--link-color);
+  color: white;
   text-decoration: none;
   font-weight: 500;
   transition: 
@@ -45,7 +44,7 @@ a:hover::after {
 }
 
 a:visited {
-  color: var(--visited-color);
+  color: gray;
 }
 
 a:active {
@@ -78,26 +77,33 @@ a[aria-disabled="true"] {
   transform: translate(2px, -2px);
 }
 
-    
-.header{
-  background-color: #000000;
-  height: fit-content;
-  width: fit-content;
-}
+  
 
 .topnav{
   position: fixed;
   right: 10%;
   top: 6%;
- 
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 85%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
 }
-      .img-logo {
-        position: fixed;
-        bottom: 65%;
-        left: 0%;
-      }
 
+      .img-logo {
+        position: sticky;
+        top: 0px;
+        right: 75%;
+        margin: 0;
+      }
 
   .img-m{
     border-radius: 20px;
@@ -195,3 +201,62 @@ font-size: x-large;
         background-color: #020024;
         color: white;
       }
+
+      
+       #footer{
+       background-color: black;
+       margin: -1%;
+       width: 100%;
+       margin-top: 50%;
+    
+    
+       
+
+   
+     
+       }
+   
+       footer{
+      
+        position: absolute;
+       
+        color: rgb(255, 255, 255);
+       
+       
+       }
+        .our_social_medias{
+          margin-left: 20px;
+         
+        }
+     
+       .contact{
+  
+        position: absolute;
+        bottom: 30%;
+        left: 30%;
+        color: rgb(255, 255, 255);
+       }
+
+  
+        .location{
+          position: absolute;
+          bottom: 7%;
+          left: 60%;
+          
+          color: rgb(255, 255, 255);
+        }
+
+
+        #footer li:hover {
+    color: #3498db; 
+    transform: translateX(4px);
+}
+
+
+#footer img:hover {
+    transform: scale(1.1);
+}
+
+.footer, .contact, .location {
+    margin-bottom: 1.5rem;
+}

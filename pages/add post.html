@@ -8,15 +8,16 @@
 </head>
 <body>
 <header class="header">
-    <img src="../assets/images/logo1.gif" alt="logo" width="300" height="300" class="img-logo">
+    <img src="../assets/images/logo_white.gif" alt="logo" width="400" height="90" class="img-logo">
     <nav class="topnav">
-      <a href="./home-page.html" class="visited">home</a>
-      <a href="./about-page.html" class="visited">about</a>
-      <a href="./skills-page.html" class="visited">skills</a>
-      <a href="./portfolio-page.html" class="visited">portfolio</a>
-      <a href="./blogs.html" class="visited">blog</a>
-      <a href="./login-page.html" class="visited">login</a>
-      <a href="./contact-page.html" class="visited">contact</a>
+      <a href="./home-page.html" >home</a>
+      <a href="./about-page.html" >about</a>
+      <a href="./skills-page.html" >skills</a>
+      <a href="./portfolio-page.html">portfolio</a>
+      <a href="./blogs.html">blog</a>
+       <a href="./contact-page.html">contact</a>
+      <a href="./login-page.html" >login</a>
+     
     </nav>
 </header>
    <div class="vl">
@@ -50,181 +51,10 @@
    <div id="display-blog"></div>
 </div>
 <style>
-    #display-blog {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        margin: 32px 0;
-        justify-content: center;
-        margin-top: 50%;
-    }
-    .blog-post {
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        padding: 20px;
-        width: min-content;
-        height: min-content;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: box-shadow 0.2s;
-        background-color: #333
-      
-        ;
-    }
-    .blog-post:hover {
-        box-shadow: 0 4px 24px rgba(0,0,0,0.15);
-    }
-    .blog-post img {
-        border-radius: 8px;
-        margin-bottom: 12px;
-        margin-left: 70px;
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        background: #f0f0f0;
-    }
-    .blog-post h2 {
-        font-size: 1.2rem;
-        margin: 10px 0 8px 0;
-        color: #333;
-        text-align: center;
-    }
-    .blog-post p {
-        font-size: 1rem;
-        color: #555;
-        text-align: center;
-        margin: 0;
-        word-break: break-word;
-        
-    }
-
-    .read-more-btn{
-        border-radius: 30px;
-        width: fit-content;
-        padding-left: 10px;
-        margin-left: 100px;
-    }
-
-      .delete-btn {
-        background: red;
-        color: white;
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
-        display: flex;
-        justify-content: center;
-        margin-left: 80%;
-        cursor: pointer;
-      }
-     
+   
 </style>
 
-<script>
-    document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const name = document.getElementById('name').value.trim();
-        const description = document.getElementById('description').value.trim();
-        const imageInput = document.getElementById('upload-image');
-        const image = imageInput.files[0];
-
-        if (!name || !description || !image) {
-            alert('Please fill all fields and select an image.');
-            return;
-        }
-
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            // Assign a unique id to each post
-            const blogPost = {
-                id: Date.now(),
-                name: name,
-                description: description,
-                image: e.target.result
-            };
-
-            // Save to localStorage
-            let posts = JSON.parse(localStorage.getItem('posts') || '[]');
-            posts.push(blogPost);
-            localStorage.setItem('posts', JSON.stringify(posts));
-
-            displayPosts();
-            document.getElementById('name').value = '';
-            document.getElementById('description').value = '';
-            imageInput.value = '';
-        };
-        reader.readAsDataURL(image);
-    });
-
-    function displayPosts() {
-        const posts = JSON.parse(localStorage.getItem('posts') || '[]');
-        const display = document.getElementById('display-blog');
-        display.innerHTML = '';
-        posts.forEach(post => {
-            // Create post container
-            const postDiv = document.createElement('div');
-            postDiv.className = 'blog-post';
-
-            // Delete button
-            const deleteBtn = document.createElement('span');
-            deleteBtn.className = 'delete-btn';
-            deleteBtn.textContent = '✕';
-            deleteBtn.onclick = () => deletePost(post.id);
-            postDiv.appendChild(deleteBtn);
-
-            // Title
-            const title = document.createElement('h2');
-            title.textContent = post.name;
-            postDiv.appendChild(title);
-
-            // Image
-            const img = document.createElement('img');
-            img.src = post.image;
-            img.alt = 'blog image';
-            img.width = 150;
-            img.height = 150;
-            postDiv.appendChild(img);
-
-            // Description
-            const desc = document.createElement('p');
-            desc.textContent = post.description.length > 100 ? post.description.substring(0, 100) + '...' : post.description;
-            postDiv.appendChild(desc);
-
-            // Read More button
-            const btn = document.createElement('button');
-            btn.className = 'read-more-btn';
-            btn.textContent = 'Read More';
-            btn.onclick = () => alert(post.description);
-            postDiv.appendChild(btn);
-
-            display.appendChild(postDiv);
-        });
-    }
-
-    function loopThroughLocalStorageItems() {
-        for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            const value = localStorage.getItem(key);
-            alert(`Key: ${key}\nValue: ${value}`);
-            console.log(`Key: ${key}, Value: ${value}`);
-        }
-    }
-
-    // Display posts on page load
-    window.onload = function() {
-        displayPosts();
-    };
-
-    function deletePost(id) {
-        if (confirm('Are you sure you want to delete this post?')) {
-            let posts = JSON.parse(localStorage.getItem('posts') || '[]');
-            posts = posts.filter(post => post.id !== id);
-            localStorage.setItem('posts', JSON.stringify(posts));
-            displayPosts();
-        }
-    }
+<script src="../java script/add post.js">
 </script>
 </body>
 </html>

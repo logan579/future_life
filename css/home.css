@@ -9,7 +9,7 @@ a {
   --active-color: #d6dd06e6;    
   --focus-outline: 2px solid #60a5fa; 
   
-  color: var(--link-color);
+  color: white;
   text-decoration: none;
   font-weight: 500;
   transition: 
@@ -47,8 +47,7 @@ a:hover::after {
 }
 
 a:visited {
-  color: var(--visited-color);
-}
+  color: gray}
 
 a:active {
   color: var(--active-color);
@@ -81,21 +80,30 @@ a[aria-disabled="true"] {
 }
 
     
-.header{
-  display: flex;
-  background-color: black;
-}
+
 
 .topnav{
   position: fixed;
   right: 10%;
   top: 6%;
- 
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 85%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
 }
+
       .img-logo {
-        position: fixed;
-        top: -9%;
+        position: sticky;
+        top: 0px;
         right: 75%;
         margin: 0;
       }
@@ -129,23 +137,21 @@ a[aria-disabled="true"] {
        #footer{
        background-color: black;
       margin: -1%;
-       width: 100%;
-    
-    
-       
+      width: 100%;
+     margin-top: 31%;
 
-   
-     
        }
-   
+
+
+
        footer{
-      
+
         position: absolute;
-        bottom: 0%;
+
         color: rgb(255, 255, 255);
-       
+
        }
-     
+
        .contact{
   
         position: absolute;
@@ -166,7 +172,7 @@ a[aria-disabled="true"] {
 
         #footer li:hover {
     color: #3498db; 
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
 

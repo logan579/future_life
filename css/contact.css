@@ -1,12 +1,16 @@
 
-       body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
+       body{ background-image: linear-gradient(to left,#020024,#090979,#708033);
+      
+       width: 100%;
+       height: 100%;
+      }
    
 
       /* ===== Expert-Level Link Styling FROM LOGAN579 ===== */
 
 a {
   --link-color: white;      
-  --visited-color: #000000;   
+  --visited-color: gray;   
   --hover-color: #b7acac;      
   --active-color: #d6dd06e6;    
   --focus-outline: 2px solid #60a5fa; 
@@ -81,26 +85,34 @@ a[aria-disabled="true"] {
   transform: translate(2px, -2px);
 }
 
-    
-.header{
-  background-color: #000000;
-  height: fit-content;
-  width: fit-content;
-}
+  
 
 .topnav{
   position: fixed;
   right: 10%;
   top: 6%;
- 
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 85%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
 }
+
       .img-logo {
-        position: fixed;
-        bottom: 60%;
-        right: 80%;
-    
+        position: sticky;
+        top: 0px;
+        right: 75%;
+        margin: 0;
       }
+
 
 
 .container{
@@ -110,9 +122,9 @@ a[aria-disabled="true"] {
    border-radius: 10px;
    box-shadow: 0 10px 10px rgba(36, 13, 13, 0.1);
    width: 350px;
-   position: absolute;
-   top: 30%;
-   left: 60%;
+   position: inherit;
+    margin-left: 60%;
+    margin-top: 15%;
    color: white;
     
 
@@ -163,9 +175,9 @@ input {
     border-left: 20px solid #f1f1f1;
     width:fit-content;
     height: fit-content;
-    position: absolute;
-    top: 36%;
-    left: 1%;
+    position: inherit;
+    margin-top: -20%;
+    margin-left: 10px;
     background-color: black;
     box-shadow: 10px 10px 10px 5px  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-transform: uppercase;
@@ -186,47 +198,55 @@ input {
   }
 
 
-  /* Footer Styles */
-#footer {
-    background-color: #2c3e50; /* Dark blue-gray background */
-    color: #ecf0f1; /* Light text color */
-    padding: 2.5rem 1rem;
-    margin-top: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    bottom: 0%;
-}
+       #footer{
+       background-color: black;
+      margin: -1%;
+       width: 100%;
+       margin-top: 15%;
+    
+    
+       
 
-#footer h1 {
+   
+     
+       }
+   
+       footer{
+      
+        position: absolute;
+       
+        color: rgb(255, 255, 255);
+       
+       
+       }
+        .our_social_medias{
+          margin-left: 20px;
+         
+        }
+     
+       .contact{
+  
+        position: absolute;
+        bottom: 30%;
+        left: 30%;
+        color: rgb(255, 255, 255);
+       }
+
+  
+        .location{
+          position: absolute;
+          bottom: 7%;
+          left: 60%;
+          
+          color: rgb(255, 255, 255);
+        }
+
+
+        #footer li:hover {
     color: #3498db; 
-    font-size: 1.4rem;
-    margin-bottom: 1.2rem;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 0.5rem;
-    display: inline-block;
+    transform: translateX(4px);
 }
 
-#footer ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-#footer li {
-    margin-bottom: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    transition: all 0.3s ease;
-}
-
-#footer li:hover {
-    color: #3498db; /* Light blue on hover */
-    transform: translateX(5px);
-}
-
-#footer img {
-    filter: brightness(0) invert(1); /* Make icons white */
-    transition: transform 0.3s ease;
-}
 
 #footer img:hover {
     transform: scale(1.1);
@@ -234,44 +254,4 @@ input {
 
 .footer, .contact, .location {
     margin-bottom: 1.5rem;
-}
-
-.location img {
-    margin-right: 1rem;
-    filter: brightness(0) invert(1);
-    opacity: 0.8;
-}
-
-
-@media (min-width: 768px) {
-    #footer {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        padding: 3rem 2rem;
-    }
-    
-    .footer, .contact, .location {
-        margin-bottom: 0;
-    }
-    
-    .location {
-        text-align: center;
-    }
-}
-
-/*Re sponsive adjustments */
-@media (max-width: 480px) {
-    #footer h1 {
-        font-size: 1.2rem;
-    }
-    
-    #footer li {
-        font-size: 0.9rem;
-    }
-    
-    .location img {
-        width: 80px;
-        height: 80px;
-    }
 }

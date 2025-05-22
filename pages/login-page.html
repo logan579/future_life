@@ -7,15 +7,16 @@
 <body>
 
     <header class="header">
-    <img src="../assets/images/logo1.gif" alt="logo" width="300" height="300" class="img-logo">
+    <img src="../assets/images/logo_white.gif" alt="logo" width="400" height="90" class="img-logo">
     <nav class="topnav">
       <a href="./home-page.html" class="active">home</a>
       <a href="./about-page.html" >about</a>
       <a href="./skills-page.html">skills</a>
       <a href="./portfolio-page.html" >portfolio</a>
        <a href="./blogs.html">blog</a>
+       <a href="./contact-page.html" >contact</a>
       <a href="./login-page.html" >login</a>
-      <a href="./contact-page.html" >contact</a>
+      
       
    </nav>
    </header> 
@@ -29,7 +30,7 @@
             <label for="loginPassword">Password:</label>
             <input type="password" id="loginPassword" required>
             <button type="submit">Login</button>
-            <p>Don't have an account?<button id="showsignup" class="btn-signup">signup</button></p>
+            <p style="color: wheat;">Don't have an account?<button id="showsignup" class="btn-signup">signup</button></p>
               <div id="message"></div>
          </form>
        </div>
@@ -41,101 +42,11 @@
             <label for="signupPassword">Password:</label>
             <input type="password" id="signupPassword" required minlength="6">
             <button type="submit">Signup</button>
-             <p>Don't have an account?<button id="showlogin" class="btn-signup">login</button></p>
+             <p style="color: wheat;">Don't have an account?<button id="showlogin" class="btn-signup">login</button></p>
               <div id="showmessage"></div>
          </form>
         </div>
     </div>
-  <script>
-
-
-  document.getElementById('signupForm').style.visibility = 'hidden'; // Hide signup form initially
-   document.getElementById('showsignup').addEventListener('click', function() {
-    document.getElementById('signupForm').style.visibility = 'visible' // Show signup form
-    document.getElementById('loginForm').style.visibility = 'hidden'; // Hide login form
-   });
-
-
-
-  document.getElementById('showlogin').addEventListener('click', function() {
-    document.getElementById('signupForm').style.visibility = 'hidden' // Show signup form
-    document.getElementById('loginForm').style.visibility = 'visible'; // Hide login form
-  });
-
-
-        // Helper to get users from localStorage
-        function getUsers() {
-            return JSON.parse(localStorage.getItem('users') || '[]');
-        }
-        // Helper to save users to localStorage
-        function saveUsers(users) {
-            localStorage.setItem('users', JSON.stringify(users));
-        }
-
-        // Signup form validation and storage
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('signupEmail').value.trim();
-            const password = document.getElementById('signupPassword').value;
-            const users = getUsers();
-
-            if (users.find(u => u.email === email)) {
-                showMessage('Email already registered.', true);
-                return;
-            }
-            if (!validateEmail(email)) {
-                showMessage('Invalid email format.', true);
-                return;
-            }
-            if (password.length < 6) {
-                showMessage('Password must be at least 6 characters.', true);
-                return;
-            }
-            users.push({ email, password });
-            saveUsers(users);
-            showMessage('Signup successful! You can now login.', false);
-            this.reset()
-            setTimeout(() => {
-                document.getElementById('signupForm').style.visibility = 'hidden'; // Hide signup form
-                document.getElementById('loginForm').style.visibility = 'visible'; // Show login form
-            }, 2000);
-          function showMessage(msg, isError) {
-            const div = document.getElementById('showmessage');
-            div.textContent = msg;
-            div.style.color = isError ? 'red' : 'green';
-        }
-
-        });
-       
-        // Login form validation
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('loginEmail').value.trim();
-            const password = document.getElementById('loginPassword').value;
-            const users = getUsers();
-
-            const user = users.find(u => u.email === email && u.password === password);
-            if (user) {
-                showMessage('Login successful!', false);
-                setTimeout(() => {
-                    window.location.href = './home-page.html'; // Redirect to home page
-                },3000 );
-            
-            } else {
-                showMessage('Invalid email or password.', true);
-            }
-        });
-
-        function showMessage(msg, isError) {
-            const div = document.getElementById('message');
-            div.textContent = msg;
-            div.style.color = isError ? 'red' : 'green';
-        }
-
-        function validateEmail(email) {
-            // Simple email regex
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        }
-    </script>
+  <script src="../java script/login.js"></script>
 </body>
 </html>

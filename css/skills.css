@@ -30,7 +30,7 @@ body{
 
 a {
   --link-color: white;
-  --visited-color: #000000;   
+  --visited-color: gray;   
   --hover-color: #b7acac;      
   --active-color: #d6dd06e6;    
   --focus-outline: 2px solid #60a5fa; 
@@ -45,7 +45,7 @@ a {
   position: relative;
   margin-right: 20px;
   font-weight:lighter;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
   font-size: x-large;
 
   outline: none; 
@@ -106,24 +106,33 @@ a[aria-disabled="true"] {
   transform: translate(2px, -2px);
 }
 
-    
-.header{
-  background-color: #000000;
-  height: fit-content;
-  width: fit-content;
-}
+   
 
 .topnav{
   position: fixed;
   right: 10%;
   top: 6%;
- 
-
 }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 85%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+ 
+}
+
       .img-logo {
         position: fixed;
-        bottom: 60%;
-        right: 60%;
+        top: 0px;
+        right: 67%;
+        margin: 0;
       }
 
 
