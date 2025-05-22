@@ -1,4 +1,5 @@
-body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
+body{ background-image: linear-gradient(to left,#020024,#090979,#708033);
+    font-family: Arial, sans-serif;}
 
 #description{
     width: 350px;
@@ -118,9 +119,9 @@ a[aria-disabled="true"] {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 350px;
-    position: absolute;
-    top: 30%;
-    left: 60%;
+    position: inherit;
+    margin-top: -28%;
+    margin-left: auto;
     color: white;
 }
 h2 {
@@ -159,34 +160,31 @@ button:hover {
     border-left: 20px solid #f1f1f1;
     width:fit-content;
     height: fit-content;
-    position: absolute;
-    top: 36%;
-    left: 1%;
-    background-color: black;
+    position: inherit;
+    margin-top: 20%;
     box-shadow: 10px 10px 10px 5px  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-transform: uppercase;
     text-overflow: ellipsis;
+      font-size: x-large;
+     font-style: italic;
+     font-family:cursive
+  
     
   }
 
-  .detail{
-     color: white;
-     margin-left: 20px;
-     font-size: x-large;
-     font-style: italic;
-     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
+ 
     .topnav :active{
         background-color: #020024;
         color: white;
       }
- #display-blog {
+
+  #display-blog {
         display: flex;
         flex-wrap: wrap;
         gap: 24px;
         margin: 32px 0;
         justify-content: center;
-        margin-top: 50%;
+        margin-top: 10%;
     }
     .blog-post {
         background: #fff;
@@ -207,9 +205,8 @@ button:hover {
         box-shadow: 0 4px 24px rgba(0,0,0,0.15);
     }
     .blog-post img {
-        border-radius: 8px;
         margin-bottom: 12px;
-        margin-left: 70px;
+        box-shadow:  0 4px 24px white;
         width: 150px;
         height: 150px;
         object-fit: cover;
@@ -218,17 +215,29 @@ button:hover {
     .blog-post h2 {
         font-size: 1.2rem;
         margin: 10px 0 8px 0;
-        color: #333;
+        color: #ffffff;
         text-align: center;
     }
     .blog-post p {
         font-size: 1rem;
-        color: #555;
+        color: #ffffff;
         text-align: center;
         margin: 0;
         word-break: break-word;
         
     }
+     .read-more-btn {
+  
+    padding: 10px;
+    background: #000000;
+    color: #fff;
+    border: none;
+ 
+    cursor: pointer;
+}
+.read-more-btn:hover {
+    background: #424342;
+}
 
     .read-more-btn{
         border-radius: 30px;
@@ -236,6 +245,7 @@ button:hover {
         padding-left: 10px;
         margin-left: 100px;
     }
+
 
       .delete-btn {
         background: red;
@@ -248,4 +258,61 @@ button:hover {
         margin-left: 80%;
         cursor: pointer;
       }
+         
+       #footer{
+       background-color: black;
+      margin: -1%;
+       width: 100%;
+       margin-top: 10%;
+    
+    
+       
+
+   
      
+       }
+   
+       footer{
+      
+        position: absolute;
+       
+        color: rgb(255, 255, 255);
+       
+       
+       }
+        .our_social_medias{
+          margin-left: 20px;
+         
+        }
+     
+       .contact{
+  
+        position: absolute;
+        bottom: 30%;
+        left: 30%;
+        color: rgb(255, 255, 255);
+       }
+
+  
+        .location{
+          position: absolute;
+          bottom: 7%;
+          left: 60%;
+          
+          color: rgb(255, 255, 255);
+        }
+
+
+        #footer li:hover {
+    color: #3498db; 
+    transform: translateX(4px);
+}
+
+
+#footer img:hover {
+    transform: scale(1.1);
+}
+
+.footer, .contact, .location {
+    margin-bottom: 1.5rem;
+}

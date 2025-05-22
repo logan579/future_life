@@ -1,0 +1,129 @@
+    /* ===== YOUR EXISTING STYLES ===== */
+        body {
+            background-image: linear-gradient(to left, #020024, #090979, #708033);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            
+        }
+
+        a {
+            --link-color: white;
+            --visited-color: #000000;
+            --hover-color: #b7acac;
+            --active-color: #d6dd06e6;
+            --focus-outline: 2px solid #60a5fa;
+            
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 
+                color 0.2s ease,
+                background-color 0.2s ease,
+                text-decoration-color 0.2s ease;
+            position: relative;
+            margin-right: 20px;
+            font-weight: lighter;
+            font-size: x-large;
+            outline: none;
+        }
+
+        a:not(.no-underline)::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--link-color);
+            transition: width 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--hover-color);
+            text-decoration-color: var(--hover-color);
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
+        a:visited {
+            color: gray;
+        }
+
+        a:active {
+            color: var(--active-color);
+            transform: translateY(1px);
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 1rem 2rem;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+         
+        }
+
+        .img-logo {
+            position: sticky;
+            top: 0px;
+            right: 75%;
+            margin: 0;
+            height: 60px;
+        }
+
+        .topnav {
+            position: fixed;
+            right: 10%;
+            top: 6%;
+        }
+
+    .settings-box {
+      margin-top: 6rem;
+      background: rgba(0,0,0,0.6);
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      background-color: #d6dd06e6;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #f0f500;
+    }
+
+    #settingsMessage {
+      margin-top: 1rem;
+      font-weight: bold;
+    }

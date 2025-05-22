@@ -71,7 +71,7 @@
        
             const btn = document.createElement('button');
             btn.className = 'read-more-btn';
-            btn.textContent = 'Read More';
+            btn.textContent = '...';
             btn.onclick = () => alert(post.description);
             postDiv.appendChild(btn);
 
@@ -93,3 +93,4 @@
             displayPosts();
         }
     }
+

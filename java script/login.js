@@ -69,7 +69,7 @@
             if (user) {
                 showMessage('Login successful!', false);
                 setTimeout(() => {
-                    window.location.href = './home-page.html'; // Redirect to home page
+                    window.location.href = './dashboard.html'; // Redirect to dashboard
                 },3000 );
             
             } else {
@@ -87,3 +87,6 @@
             // Simple email regex
             return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
         }
+
+
+        

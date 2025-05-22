@@ -1,35 +1,11 @@
 body{
     background-image: linear-gradient(to left,#020024,#090979,#708033);
-}
+    font-family: Arial, sans-serif;
+  }
 
-.containt{
-    background-image: linear-gradient(to left,#020024,#090979,#313839);
-    box-shadow: 10px 10px rgba(36, 13, 13, 0.1);
-    color: white;
-    position: absolute;
-    top: 150px;
-    left:620px;
-    border-radius: 15px;
-
-
-}
-
-
-.img-contain{
-    position: absolute;
-    top: 210px;
-    left: 30px;
-    border-radius: 50px;
-    background-color: #020024;
-    box-shadow: 10px 10px black
-}
-
-
-    body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
-      /* ===== Expert-Level Link Styling FROM LOGAN579 ===== */
 
 a {
-  --link-color: white;
+  --link-color: white;    
   --visited-color: gray;   
   --hover-color: #b7acac;      
   --active-color: #d6dd06e6;    
@@ -45,7 +21,7 @@ a {
   position: relative;
   margin-right: 20px;
   font-weight:lighter;
-  
+ 
   font-size: x-large;
 
   outline: none; 
@@ -106,13 +82,15 @@ a[aria-disabled="true"] {
   transform: translate(2px, -2px);
 }
 
-   
+
+
 
 .topnav{
   position: fixed;
   right: 10%;
   top: 6%;
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -124,11 +102,10 @@ a[aria-disabled="true"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
- 
-}
 
-      .img-logo {
+
+}
+   .img-logo {
         position: fixed;
         top: 0px;
         right: 67%;
@@ -136,64 +113,171 @@ a[aria-disabled="true"] {
       }
 
 
-.introduction{
- position: absolute;
- bottom: 50%;
- right: 40%;
- color: rgb(0, 0, 0);
- font-style: italic;
- font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
- font-size: 20px;
+.containt{
+    background-image: linear-gradient(to left,#020024,#090979,#313839);
+    box-shadow: 10px 10px rgba(36, 13, 13, 0.1);
+    color: white;
+    position: inherit;
+    margin-top: -27%;
+    margin-left: 50%;
+    border-radius: 15px;
+
+
+}
+
+
+.img-contain{
+    position: inherit;
+    margin-top: 15%;
+    margin-left: 2%;
+    border-radius: 50px;
+    background-color: #020024;
+    box-shadow: 10px 10px black
+}
+
+
+    body{ background-image: linear-gradient(to left,#020024,#090979,#708033);}
  
-}
-
-.footer{
-
- position: absolute;
- bottom: 10%;
-}
 
 
-.contact{
 
- position: absolute;
- bottom: 16%;
- left: 30%;
-}
+       #footer{
+       background-color: black;
+      margin: -1%;
+       width: 100%;
+       margin-top: 10%;
+     
+    
+       
 
-
- .location{
-   position: absolute;
-   bottom: 7%;
-   left: 60%;
    
-   color: rgb(255, 255, 255);
- }
-@media (max-width:786px) {
-     .img-logo {
-        position: fixed;
-        right: 50%;
-      top:-16vh;
-      justify-content: left;
-      }
-.img-contain {
-    width: 430px;
-}
-.containt {
-    position: absolute;
-    top: 100%;
-
-    left: 60px;
-}
-.topnav {
-    position: fixed;
-    top: 5vh;
-        width: 70%;
-        left: 35%;
-        height: 19%;
+     
+       }
+   
+       footer{
+      
+        position: absolute;
+       
+        color: rgb(255, 255, 255);
+       
+       
+       }
+        .our_social_medias{
+          margin-left: 20px;
+         
+        }
+     
+       .contact{
   
-}
+        position: absolute;
+        bottom: 30%;
+        left: 30%;
+        color: rgb(255, 255, 255);
+       }
+
+  
+        .location{
+          position: absolute;
+          bottom: 7%;
+          left: 60%;
+          
+          color: rgb(255, 255, 255);
+        }
+
+
+        #footer li:hover {
+    color: #3498db; 
+    transform: translateX(4px);
 }
 
+
+#footer img:hover {
+    transform: scale(1.1);
+}
+
+.footer, .contact, .location {
+    margin-bottom: 1.5rem;
+}
+ 
 
  
+/* ===== RESPONSIVE ADDITIONS (SAFE) ===== */
+@media (max-width: 1200px) {
+    .img-logo {
+        right: 60%;
+    }
+    .containt {
+        margin-left: 45%;
+    }
+}
+
+@media (max-width: 992px) {
+    .img-logo {
+        right: 50%;
+    }
+    .vl {
+        width: 400px;
+        left: 2%;
+    }
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+    .img-logo {
+        position: static;
+        right: auto;
+        display: block;
+        margin: 0 auto 1rem;
+    }
+    .header {
+        position: relative;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .topnav {
+        position: static;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+       
+    }
+    .img-contain {
+        margin: 5% auto;
+        width: 90%;
+        position: static;
+    }
+    .containt {
+        margin: 20px auto;
+        width: 90%;
+        position: static;
+    }
+    .vl {
+        display: none; /* Hide on small screens */
+    }
+
+    #footer {
+        position: static;
+        margin: 0 auto;
+        width: 90%;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .contact, .location {
+        position: static;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+/* Small Mobile (576px and below) */
+@media (max-width: 576px) {
+    a {
+        font-size: large;
+        margin-right: 10px;
+    }
+    .img-contain, .containt {
+        width: 95%;
+    }
+}
