@@ -10,7 +10,7 @@
 
         a {
             --link-color: white;
-            --visited-color: #000000;
+            --visited-color: #ffffff;
             --hover-color: #b7acac;
             --active-color: #d6dd06e6;
             --focus-outline: 2px solid #60a5fa;
@@ -48,6 +48,37 @@
         a:hover::after {
             width: 100%;
         }
+        a:visited {
+            color: var(--visited-color);
+        }
+
+        a:active {
+            color: var(--active-color);
+            transform: translateY(1px);
+        }
+
+        a:focus-visible {
+            outline: var(--focus-outline);
+        }
+        
+        
+a[aria-disabled="true"] {
+  color: #94a3b8 !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+.external-link::after {
+  content: " ↗";
+  display: inline-block;
+  margin-left: 0.25em;
+  transition: transform 0.2s ease;
+}
+
+.external-link:hover::after {
+  transform: translate(2px, -2px);
+}
 
         .header {
             position: fixed;
@@ -77,7 +108,8 @@
 
         /* ===== PROFILE PAGE SPECIFIC STYLES ===== */
         .profile-container {
-            padding-top: 120px;
+            padding-top: 150px;
+           
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -190,6 +222,66 @@
     margin-bottom: 1.5rem;
 }
 
+
+
+    
+
+       .contact{
+  
+        position: absolute;
+        bottom: 18%;
+        left: 30%;
+        color: rgb(255, 255, 255);
+       }
+
+        .location{
+          position: absolute;
+          bottom: -5%;
+          left: 60%;
+          
+          color: rgb(255, 255, 255);
+        }
+
+       #footer{
+       background-color: black;
+      margin: -1%;
+       width: 100%;
+ 
+    
+    
+       
+
+   
+     
+       }
+   
+       footer{
+      
+        position: absolute;
+       
+        color: rgb(255, 255, 255);
+       
+       
+       }
+        .our_social_medias{
+          margin-left: 20px;
+         
+        }
+     
+    
+        #footer li:hover {
+    color: #3498db; 
+    transform: translateX(0.5px);
+}
+
+
+#footer img:hover {
+    transform: scale(1.1);
+}
+
+.footer, .contact, .location {
+    margin-bottom: 1.5rem;
+}
         /* ===== RESPONSIVE ADJUSTMENTS ===== */
         @media (max-width: 768px) {
             .profile-container {
