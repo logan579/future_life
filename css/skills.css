@@ -6,7 +6,7 @@ body{
 
 a {
   --link-color: white;    
-  --visited-color: gray;   
+  --visited-color: rgb(255, 255, 255);   
   --hover-color: #b7acac;      
   --active-color: #d6dd06e6;    
   --focus-outline: 2px solid #60a5fa; 
@@ -224,15 +224,21 @@ a[aria-disabled="true"] {
 /* Mobile (768px and below) */
 @media (max-width: 768px) {
     .img-logo {
-        position: static;
+        position: fixed;
         right: auto;
         display: block;
         margin: 0 auto 1rem;
+        width: 100px;
+        height: 60px;
     }
     .header {
-        position: relative;
+        position: fixed;
+        top: 1%;
+        justify-content: center;
         flex-direction: column;
         padding: 1rem;
+        background-color: #020024;
+        
     }
     .topnav {
         position: static;
@@ -268,8 +274,92 @@ a[aria-disabled="true"] {
         position: static;
         margin: 0 auto;
         text-align: center;
+
     }
+
+    
+  a{
+    font-size: small;
+   --link-color: white;      
+  --visited-color: #ffffff;   
+  --hover-color: #b7acac;      
+  --active-color: #d6dd06e6;    
+  --focus-outline: 2px solid #60a5fa; 
+  
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 
+    color 0.2s ease,
+    background-color 0.2s ease,
+    text-decoration-color 0.2s ease;
+  position: relative;
+  margin-right: 20px;
+  font-weight:lighter;
+ 
+  height: 20px;
+
+  outline: none; 
 }
+
+a:not(.no-underline)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--link-color);
+  transition: width 0.3s ease;
+}
+
+
+a:hover {
+  color: var(--hover-color);
+  text-decoration-color: var(--hover-color);
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:visited {
+  color: gray}
+
+a:active {
+  color: var(--active-color);
+  transform: translateY(1px); /* Micro-interaction */
+}
+
+a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+
+a[aria-disabled="true"] {
+  color: #94a3b8 !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+.external-link::after {
+  content: " ↗";
+  display: inline-block;
+  margin-left: 0.25em;
+  transition: transform 0.2s ease;
+}
+
+.external-link:hover::after {
+  transform: translate(2px, -2px);
+}
+
+ 
+}
+
+
 
 /* Small Mobile (576px and below) */
 @media (max-width: 576px) {
