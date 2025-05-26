@@ -146,3 +146,155 @@ a[aria-disabled="true"] {
       margin-top: 1rem;
       font-weight: bold;
     }
+@media (max-width: 375px) {
+  .topnav{
+    position: fixed;
+    right: 0%;
+    top:3%;
+    display: flex;
+  }
+    .img-logo{
+        position: fixed;
+        right: 78%;
+        width: 60px;
+        height: 60px;
+    }
+        a {
+            --link-color: white;
+            --visited-color: #ffffff;
+            --hover-color: #b7acac;
+            --active-color: #d6dd06e6;
+            --focus-outline: 2px solid #60a5fa;
+            font-size: xx-small;
+            color: white;
+            text-decoration: none;
+
+  transition: 
+    color 0.2s ease,
+    background-color 0.2s ease,
+    text-decoration-color 0.2s ease;
+  position: relative;
+ margin: 3px;
+  display: flex;
+
+ 
+
+
+  outline: none; 
+}
+
+a:not(.no-underline)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--link-color);
+  transition: width 0.3s ease;
+
+
+}
+
+
+a:hover {
+  color: var(--hover-color);
+  text-decoration-color: var(--hover-color);
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:visited {
+  color: gray}
+
+a:active {
+  color: var(--active-color);
+  transform: translateY(1px); /* Micro-interaction */
+}
+
+a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+
+a[aria-disabled="true"] {
+  color: #94a3b8 !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+.external-link::after {
+  content: " ↗";
+  display: inline-block;
+  margin-left: 0.25em;
+  transition: transform 0.2s ease;
+}
+
+.external-link:hover::after {
+  transform: translate(2px, -2px);
+}
+
+
+        
+
+        
+       #footer{
+      margin: -1%;
+      width: 100%;
+       background-color: black;
+     margin-top: 10%;
+     
+
+       }
+
+
+
+       footer{
+        background-color: black;
+        position: absolute;
+
+        color: rgb(255, 255, 255);
+
+       }
+
+       .contact{
+  
+        position: absolute;
+        bottom: -79%;
+        left: 0%;
+        color: rgb(255, 255, 255);
+        background-color: black;
+        width: 100%;
+       }
+
+  
+        .location{
+          position: absolute;
+          bottom: -170%;
+          left: 0%;
+          background-color: black;
+          width: 100%;
+          color: rgb(255, 255, 255);
+        }
+
+
+        #footer li:hover {
+    color: #3498db; 
+    transform: translateX(3px);
+}
+
+
+#footer img:hover {
+    transform: scale(1.1);
+}
+
+.footer, .contact, .location {
+    margin-bottom: 1.5rem;
+}
+}
+
