@@ -426,7 +426,7 @@ a[aria-disabled="true"] {
 
 
       
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .header {
    font-size:xx-small;
    display: flex;
@@ -581,7 +581,8 @@ a[aria-disabled="true"] {
           border-radius: 10px;}
        .introduction{
         position: inherit;
-        margin-top: -30%;
+        margin-top: -20%;
+        font-size: xx-small;
         margin-left: 0%;
         color: rgb(255, 255, 255);
        
@@ -597,7 +598,7 @@ a[aria-disabled="true"] {
           position: inherit;
 
          
-         margin-top: 30%;
+         margin-top: 20%;
         background-color: black
         ;
           box-shadow: 10px 10px 10px 5px  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

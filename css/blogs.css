@@ -430,7 +430,7 @@ a[aria-disabled="true"] {
     margin-bottom: 1.5rem;
 }
 
-@media (max-width:375px) {
+@media (max-width:420px) {
 
   .img-logo {
         position: fixed;
