@@ -253,7 +253,7 @@ a[aria-disabled="true"] {
 .footer, .contact, .location {
     margin-bottom: 1.5rem;
 }
- @media (max-width: 375px) {
+ @media (max-width: 420px) {
     .form-container {
         grid-template-columns: 1fr;
     }

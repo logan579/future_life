@@ -65,7 +65,7 @@
 
     
             const desc = document.createElement('p');
-            desc.textContent = post.description.length > 100 ? post.description.substring(0, 100) + '...' : post.description;
+            desc.textContent = post.description.length > 10 ? post.description.substring(0, 10) + '...' : post.description;
             postDiv.appendChild(desc);
 
        

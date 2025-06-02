@@ -226,7 +226,7 @@ a[aria-disabled="true"] {
     margin-bottom: 1.5rem;
 }
         /* ===== RESPONSIVE ADJ USTMENTS ===== */
-        @media (max-width:375px ) {
+        @media (max-width:420px ) {
             .dashboard-container {
                 grid-template-columns: 1fr;
                 margin-left: -8%;

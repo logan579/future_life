@@ -29,7 +29,7 @@
             const email = document.getElementById('signupEmail').value.trim();
             const password = document.getElementById('signupPassword').value;
             const users = getUsers();
-
+                                                                                                                                                                              
             if (users.find(u => u.email === email)) {
                 showMessage('Email already registered.', true);
                 return;
@@ -67,8 +67,7 @@
 
             const user = users.find(u => u.email === email && u.password === password);
             if (user) {
-                showMessage('Login successful!', false);
-                setTimeout(() => {
+                showMessage('Login successful!', false);                setTimeout(() => {
                     window.location.href = './dashboard.html'; // Redirect to dashboard
                 },3000 );
             

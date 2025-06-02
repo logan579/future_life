@@ -146,7 +146,7 @@ a[aria-disabled="true"] {
       margin-top: 1rem;
       font-weight: bold;
     }
-@media (max-width: 375px) {
+@media (max-width: 420px) {
   .topnav{
     position: fixed;
     right: 0%;
